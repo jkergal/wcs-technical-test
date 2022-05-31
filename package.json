@@ -1,0 +1,19 @@
+{
+  "name": "wcs-technical-test",
+  "version": "1.0.0",
+  "description": "Technical test for Wild Code School candidacy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkergal/wcs-technical-test.git"
+  },
+  "author": "Johann Kergal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkergal/wcs-technical-test/issues"
+  },
+  "homepage": "https://github.com/jkergal/wcs-technical-test#readme"
+}

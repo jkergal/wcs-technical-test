@@ -10,3 +10,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.members-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+}

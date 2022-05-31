@@ -21,10 +21,12 @@ export default function AddMemberForm() {
             setValidation('Member successfully added')
             console.log('Member successfully added')
             setName('')
+            setTimeout(() => setValidation(''), 3000)
         } catch (err) {
             console.log(err)
             setValidationColor('color : red')
             setValidation('Wopsy, there was an error adding the member to the database')
+            setTimeout(() => setValidation(''), 3000)
         }
     }
 
@@ -53,7 +55,7 @@ export default function AddMemberForm() {
                                 fetchBotCrewMembers()
                             })
                         }}>
-                        Envoyer
+                        Ajouter
                     </button>
                     <div className="validation" style={{ validationColor }}>
                         {validation}

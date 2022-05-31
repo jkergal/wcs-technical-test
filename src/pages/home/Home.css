@@ -1,4 +1,12 @@
 .home-container{
     height: 100%;
-    border: solid black 2px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container > * {
+    margin: 30px;
 }

@@ -1,0 +1,12 @@
+.members-list-container {
+    width: 835px;
+    background-color: #F76C6C;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

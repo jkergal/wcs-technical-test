@@ -38,12 +38,12 @@
 } */
 
 /* .content {
-  height: 100vh;
+
 } */
 
 .main-grid {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 165px 1fr 85px;
+  grid-template-rows: 130px 1fr 60px;
 }

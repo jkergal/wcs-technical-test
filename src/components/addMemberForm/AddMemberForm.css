@@ -1,0 +1,20 @@
+.new-member-form-container {
+    height: 187px;
+    width: 835px;
+    background-color: #F76C6C;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.validation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}

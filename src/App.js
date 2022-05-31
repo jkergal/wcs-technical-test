@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// import logoWc from './assets/images/logo-wc.png'
+import './App.css'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import Home from './pages/home/Home'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="main-grid">
+            <header className="header">
+                <Header />
+            </header>
+
+            <div className="content">
+                <Home />
+            </div>
+
+            <footer className="footer">
+                <Footer />
+            </footer>
+        </div>
+    )
 }
 
-export default App;
+export default App

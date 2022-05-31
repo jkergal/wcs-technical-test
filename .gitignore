@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+notes.txt
+backupOSX.sh
+backupWIN.sh
+backup.ignore.txt
 
 # testing
 /coverage

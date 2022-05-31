@@ -4,7 +4,6 @@ import { FirestoreDataContext } from '../../utils/context/firestoreDataContext'
 import Loader from '../loader/Loader'
 
 export default function MembersList() {
-    // const { members } = useContext(FirestoreDataContext)
     const { splittedMembers } = useContext(FirestoreDataContext)
     const { loadingData } = useContext(FirestoreDataContext)
 
@@ -20,7 +19,7 @@ export default function MembersList() {
                             {splittedMembers.column1.map((member) => {
                                 return (
                                     <div key={member.id} className="member-wrapper">
-                                        - {member.name}
+                                        {member.name}
                                     </div>
                                 )
                             })}
@@ -30,7 +29,7 @@ export default function MembersList() {
                             {splittedMembers.column2.map((member) => {
                                 return (
                                     <div key={member.id} className="member-wrapper">
-                                        - {member.name}
+                                        {member.name}
                                     </div>
                                 )
                             })}
@@ -40,21 +39,13 @@ export default function MembersList() {
                             {splittedMembers.column3.map((member) => {
                                 return (
                                     <div key={member.id} className="member-wrapper">
-                                        - {member.name}
+                                        {member.name}
                                     </div>
                                 )
                             })}
                         </div>
                     </div>
                 )}
-
-                {/* {members.map((member) => {
-                    return (
-                        <div key={member.id} className="member-wrapper">
-                            - {member.name}
-                        </div>
-                    )
-                })} */}
             </div>
         </>
     )

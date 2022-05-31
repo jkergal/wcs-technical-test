@@ -9,13 +9,13 @@ export const FirestoreDataContext = createContext()
 
 export function FirestoreDataProvider(props) {
     const [members, setMembers] = useState([])
-    const botCrewRef = collection(db, 'bot-crew')
+    const boatCrewRef = collection(db, 'boat-crew')
     const [loadingData, setLoadingData] = useState(true)
     const [splittedMembers, setSplittedMembers] = useState({})
 
-    const fetchBotCrewMembers = async () => {
+    const fetchBoatCrewMembers = async () => {
         try {
-            const data = await getDocs(botCrewRef)
+            const data = await getDocs(boatCrewRef)
 
             setMembers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
             setLoadingData(false)
@@ -27,7 +27,7 @@ export function FirestoreDataProvider(props) {
     }
 
     useEffect(() => {
-        fetchBotCrewMembers()
+        fetchBoatCrewMembers()
     }, [])
 
     useEffect(() => {
@@ -42,7 +42,7 @@ export function FirestoreDataProvider(props) {
 
     return (
         <FirestoreDataContext.Provider
-            value={{ members, splittedMembers, fetchBotCrewMembers, loadingData }}>
+            value={{ members, splittedMembers, fetchBoatCrewMembers, loadingData }}>
             {!loadingData && props.children}
         </FirestoreDataContext.Provider>
     )

@@ -9,12 +9,12 @@ export default function AddMemberForm() {
     const [name, setName] = useState('')
     const [validation, setValidation] = useState('')
     const [validationColor, setValidationColor] = useState('')
-    const { fetchBotCrewMembers } = useContext(FirestoreDataContext)
+    const { fetchBoatCrewMembers } = useContext(FirestoreDataContext)
     // const navigate = useNavigate()
 
     const sendNameToDb = async () => {
         try {
-            await setDoc(doc(db, 'bot-crew', Date.now().toString()), {
+            await setDoc(doc(db, 'boat-crew', Date.now().toString()), {
                 name: name
             })
             setValidationColor('color : green')
@@ -52,7 +52,7 @@ export default function AddMemberForm() {
                         onClick={(event) => {
                             event.preventDefault()
                             sendNameToDb().then(() => {
-                                fetchBotCrewMembers()
+                                fetchBoatCrewMembers()
                             })
                         }}>
                         Ajouter

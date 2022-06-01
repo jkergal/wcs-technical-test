@@ -8,7 +8,7 @@ import { FirestoreDataContext } from '../../utils/context/firestoreDataContext'
 export default function AddMemberForm() {
     const [name, setName] = useState('')
     const [validation, setValidation] = useState('')
-    const [validationColor, setValidationColor] = useState('')
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     const { fetchBoatCrewMembers } = useContext(FirestoreDataContext)
     // const navigate = useNavigate()
 
@@ -17,14 +17,14 @@ export default function AddMemberForm() {
             await setDoc(doc(db, 'boat-crew', Date.now().toString()), {
                 name: name
             })
-            setValidationColor('color : green')
-            setValidation('Member successfully added')
+            setIsFormSubmitted(true)
+            // setValidation('Member successfully added')
             console.log('Member successfully added')
             setName('')
-            setTimeout(() => setValidation(''), 3000)
+            // setTimeout(() => setValidation(''), 3000)
+            setTimeout(() => setIsFormSubmitted(false), 3000)
         } catch (err) {
             console.log(err)
-            setValidationColor('color : red')
             setValidation('Wopsy, there was an error adding the member to the database')
             setTimeout(() => setValidation(''), 3000)
         }
@@ -40,6 +40,7 @@ export default function AddMemberForm() {
                         id="name"
                         name="name"
                         type="text"
+                        value={name}
                         placeholder="Nom de l'Argonaute"
                         onChange={(event) => {
                             event.preventDefault()
@@ -47,19 +48,33 @@ export default function AddMemberForm() {
                             setName(event.target.value)
                         }}
                     />
-                    <button
-                        type="submit"
-                        onClick={(event) => {
-                            event.preventDefault()
-                            sendNameToDb().then(() => {
-                                fetchBoatCrewMembers()
-                            })
-                        }}>
-                        Ajouter
-                    </button>
-                    <div className="validation" style={{ validationColor }}>
-                        {validation}
-                    </div>
+                    {isFormSubmitted === false ? (
+                        <button
+                            type="submit"
+                            onClick={(event) => {
+                                event.preventDefault()
+                                sendNameToDb().then(() => {
+                                    fetchBoatCrewMembers()
+                                })
+                            }}>
+                            Ajouter
+                        </button>
+                    ) : (
+                        <button
+                            className="btn-green-check"
+                            style={{ backgroundColor: '#7bf46b' }}
+                            type="submit"
+                            onClick={(event) => {
+                                event.preventDefault()
+                                sendNameToDb().then(() => {
+                                    fetchBoatCrewMembers()
+                                })
+                            }}>
+                            ✅
+                        </button>
+                    )}
+
+                    <div className="validation">{validation}</div>
                 </form>
             </div>
         </>

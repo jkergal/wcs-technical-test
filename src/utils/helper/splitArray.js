@@ -3,18 +3,21 @@ export default function splitArray(array) {
 
     let splittedMembers = {}
 
-    const boatCrewLength = array.length
-    const membersSubdivisionLength = Math.ceil(boatCrewLength / 3)
-    var a = [...array]
+    const membersSubdivisionLength = Math.ceil(array.length / 3)
+    var boatCrew = [...array]
 
-    const subdivision1 = a.splice(0, membersSubdivisionLength)
-    const subdivision2 = a.splice(0, membersSubdivisionLength)
-    const subdivision3 = a
-
-    splittedMembers = {
-        column1: subdivision1,
-        column2: subdivision2,
-        column3: subdivision3
+    if (array.length === 4) {
+        splittedMembers = {
+            column1: boatCrew.splice(0, 2),
+            column2: boatCrew.splice(0, 1),
+            column3: boatCrew
+        }
+    } else {
+        splittedMembers = {
+            column1: boatCrew.splice(0, membersSubdivisionLength),
+            column2: boatCrew.splice(0, membersSubdivisionLength),
+            column3: boatCrew
+        }
     }
 
     return splittedMembers

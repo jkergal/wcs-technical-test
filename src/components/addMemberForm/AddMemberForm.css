@@ -1,11 +1,18 @@
 .new-member-form-container {
     height: 187px;
     width: 835px;
-    background-color: #F76C6C;
+    background-color: #f76c6c;
     color: #ffffff;
     padding: 30px;
     border-radius: 5px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-member-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,4 +24,57 @@
     justify-content: center;
     align-items: center;
     margin: 8px;
+}
+
+.button-default {
+    width: 217px;
+    height: 30px;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-grey {
+    background-color: #527293;
+}
+
+.button-green {
+    background-color: #518138;
+    padding: 3px;
+}
+
+.name-input-wrapper {
+    width: 100%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.name-input {
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    /* margin: 2.5px; */
+    font-size: 15px;
+    /* width: 100%; */
+/* 
+    text-align: center; */
+}
+
+.name-input:focus {
+    outline: none !important;
+    /* box-sizing: border-box; */
+    border: 2px solid #527293;
+    box-shadow: 0 0 10px #527293;
 }

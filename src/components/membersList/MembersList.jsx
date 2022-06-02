@@ -29,7 +29,7 @@ export default function MembersList() {
                                 return (
                                     <>
                                         <h1>Membres de l&apos;équipage</h1>
-                                        <div className="column-member-1">
+                                        <div className="column-member">
                                             {splittedMembers.column1.map((member) => {
                                                 return (
                                                     <div key={member.id} className="member-wrapper">
@@ -46,7 +46,7 @@ export default function MembersList() {
                                     <>
                                         <h1>Membres de l&apos;équipage</h1>
                                         <div className="members-list-grid-2-columns">
-                                            <div className="column-member-1">
+                                            <div className="column-member">
                                                 {splittedMembers.column1.map((member) => {
                                                     return (
                                                         <div
@@ -58,7 +58,7 @@ export default function MembersList() {
                                                 })}
                                             </div>
 
-                                            <div className="column-member-2">
+                                            <div className="column-member">
                                                 {splittedMembers.column2.map((member) => {
                                                     return (
                                                         <div
@@ -78,7 +78,7 @@ export default function MembersList() {
                                     <>
                                         <h1>Membres de l&apos;équipage</h1>
                                         <div className="members-list-grid-3-columns">
-                                            <div className="column-member-1">
+                                            <div className="column-member">
                                                 {splittedMembers.column1.map((member) => {
                                                     return (
                                                         <div
@@ -90,7 +90,7 @@ export default function MembersList() {
                                                 })}
                                             </div>
 
-                                            <div className="column-member-2">
+                                            <div className="column-member">
                                                 {splittedMembers.column2.map((member) => {
                                                     return (
                                                         <div
@@ -102,7 +102,7 @@ export default function MembersList() {
                                                 })}
                                             </div>
 
-                                            <div className="column-member-3">
+                                            <div className="column-member">
                                                 {splittedMembers.column3.map((member) => {
                                                     return (
                                                         <div

@@ -4,6 +4,7 @@ import './AddMemberForm.css'
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import { FirestoreDataContext } from '../../utils/context/firestoreDataContext'
+import checkIcon from '../../assets/icons/check.svg'
 
 export default function AddMemberForm() {
     const [name, setName] = useState('')
@@ -22,7 +23,7 @@ export default function AddMemberForm() {
             console.log('Member successfully added')
             setName('')
             // setTimeout(() => setValidation(''), 3000)
-            setTimeout(() => setIsFormSubmitted(false), 3000)
+            setTimeout(() => setIsFormSubmitted(false), 1000)
         } catch (err) {
             console.log(err)
             setValidation('Wopsy, there was an error adding the member to the database')
@@ -36,20 +37,25 @@ export default function AddMemberForm() {
                 <h1>Ajouter un(e) Argonaute</h1>
                 <form className="new-member-form">
                     {/* <label htmlFor="name">Nom de l&apos;Argonaute</label> */}
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        value={name}
-                        placeholder="Nom de l'Argonaute"
-                        onChange={(event) => {
-                            event.preventDefault()
-                            console.log(event.target.value)
-                            setName(event.target.value)
-                        }}
-                    />
+                    <div className="name-input-wrapper">
+                        <input
+                            className="name-input"
+                            id="name"
+                            name="name"
+                            type="text"
+                            value={name}
+                            placeholder="Nom de l'Argonaute"
+                            autoComplete="off"
+                            onChange={(event) => {
+                                event.preventDefault()
+                                console.log(event.target.value)
+                                setName(event.target.value)
+                            }}
+                        />
+                    </div>
                     {isFormSubmitted === false ? (
                         <button
+                            className="button-default button-grey"
                             type="submit"
                             onClick={(event) => {
                                 event.preventDefault()
@@ -57,12 +63,11 @@ export default function AddMemberForm() {
                                     fetchBoatCrewMembers()
                                 })
                             }}>
-                            Ajouter
+                            <b>Ajouter</b>
                         </button>
                     ) : (
                         <button
-                            className="btn-green-check"
-                            style={{ backgroundColor: '#7bf46b' }}
+                            className="button-default button-green"
                             type="submit"
                             onClick={(event) => {
                                 event.preventDefault()
@@ -70,7 +75,7 @@ export default function AddMemberForm() {
                                     fetchBoatCrewMembers()
                                 })
                             }}>
-                            ✅
+                            <img src={checkIcon}></img>
                         </button>
                     )}
 

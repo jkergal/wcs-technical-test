@@ -10,6 +10,9 @@ export default function AddMemberForm() {
     const [validation, setValidation] = useState('')
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     const { fetchBoatCrewMembers } = useContext(FirestoreDataContext)
+    // const { splittedMembers } = useContext(FirestoreDataContext)
+
+    // let
 
     const sendNameToDb = async () => {
         try {
@@ -19,7 +22,7 @@ export default function AddMemberForm() {
             setIsFormSubmitted(true)
             console.log('Member successfully added')
             setName('')
-            setTimeout(() => setIsFormSubmitted(false), 1000)
+            setTimeout(() => setIsFormSubmitted(false), 1500)
         } catch (err) {
             console.log(err)
             setValidation('Wopsy, there was an error adding the member to the database')

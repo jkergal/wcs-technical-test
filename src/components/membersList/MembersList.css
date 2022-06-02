@@ -11,6 +11,19 @@
     align-items: center;
 }
 
+@keyframes colorAnimation {
+    from {
+        background-color: #54ab26;
+        border-radius: 5px;}
+    to {color: white;
+        border-radius: 0px;}
+  }
+
+.member-wrapper-green {
+    animation-name: colorAnimation;
+    animation-duration: 2s;
+}
+
 .members-list-grid-3-columns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

@@ -7,6 +7,7 @@ export default function MembersList() {
     const { splittedMembers } = useContext(FirestoreDataContext)
     const { members } = useContext(FirestoreDataContext)
     const { loadingData } = useContext(FirestoreDataContext)
+    const { updateNumber } = useContext(FirestoreDataContext)
 
     return (
         <>
@@ -30,12 +31,29 @@ export default function MembersList() {
                                     <>
                                         <h1>Membres de l&apos;équipage</h1>
                                         <div className="column-member">
-                                            {splittedMembers.column1.map((member) => {
-                                                return (
-                                                    <div key={member.id} className="member-wrapper">
-                                                        {member.name}
-                                                    </div>
-                                                )
+                                            {splittedMembers.column1.map((member, i) => {
+                                                i++
+                                                if (
+                                                    i === splittedMembers.column1.length &&
+                                                    updateNumber > 1
+                                                ) {
+                                                    console.log('PROUUUUUUUT')
+                                                    return (
+                                                        <div
+                                                            key={member.id}
+                                                            className="member-wrapper-green">
+                                                            {member.name}
+                                                        </div>
+                                                    )
+                                                } else {
+                                                    return (
+                                                        <div
+                                                            key={member.id}
+                                                            className="member-wrapper">
+                                                            {member.name}
+                                                        </div>
+                                                    )
+                                                }
                                             })}
                                         </div>
                                     </>
@@ -59,14 +77,29 @@ export default function MembersList() {
                                             </div>
 
                                             <div className="column-member">
-                                                {splittedMembers.column2.map((member) => {
-                                                    return (
-                                                        <div
-                                                            key={member.id}
-                                                            className="member-wrapper">
-                                                            {member.name}
-                                                        </div>
-                                                    )
+                                                {splittedMembers.column2.map((member, i) => {
+                                                    i++
+                                                    if (
+                                                        i === splittedMembers.column2.length &&
+                                                        updateNumber > 1
+                                                    ) {
+                                                        console.log('PROUUUUUUUT')
+                                                        return (
+                                                            <div
+                                                                key={member.id}
+                                                                className="member-wrapper-green">
+                                                                {member.name}
+                                                            </div>
+                                                        )
+                                                    } else {
+                                                        return (
+                                                            <div
+                                                                key={member.id}
+                                                                className="member-wrapper">
+                                                                {member.name}
+                                                            </div>
+                                                        )
+                                                    }
                                                 })}
                                             </div>
                                         </div>
@@ -103,14 +136,29 @@ export default function MembersList() {
                                             </div>
 
                                             <div className="column-member">
-                                                {splittedMembers.column3.map((member) => {
-                                                    return (
-                                                        <div
-                                                            key={member.id}
-                                                            className="member-wrapper">
-                                                            {member.name}
-                                                        </div>
-                                                    )
+                                                {splittedMembers.column3.map((member, i) => {
+                                                    i++
+                                                    if (
+                                                        i === splittedMembers.column3.length &&
+                                                        updateNumber > 1
+                                                    ) {
+                                                        console.log('PROUUUUUUUT' + i)
+                                                        return (
+                                                            <div
+                                                                key={member.id}
+                                                                className="member-wrapper-green">
+                                                                {member.name}
+                                                            </div>
+                                                        )
+                                                    } else {
+                                                        return (
+                                                            <div
+                                                                key={member.id}
+                                                                className="member-wrapper">
+                                                                {member.name}
+                                                            </div>
+                                                        )
+                                                    }
                                                 })}
                                             </div>
                                         </div>

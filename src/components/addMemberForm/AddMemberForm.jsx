@@ -10,9 +10,6 @@ export default function AddMemberForm() {
     const [validation, setValidation] = useState('')
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     const { fetchBoatCrewMembers } = useContext(FirestoreDataContext)
-    // const { splittedMembers } = useContext(FirestoreDataContext)
-
-    // let
 
     const sendNameToDb = async () => {
         try {

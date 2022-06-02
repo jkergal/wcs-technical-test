@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import './AddMemberForm.css'
-// import { useNavigate } from 'react-router-dom'
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from '../../firebase.config'
 import { FirestoreDataContext } from '../../utils/context/firestoreDataContext'
@@ -11,7 +10,6 @@ export default function AddMemberForm() {
     const [validation, setValidation] = useState('')
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     const { fetchBoatCrewMembers } = useContext(FirestoreDataContext)
-    // const navigate = useNavigate()
 
     const sendNameToDb = async () => {
         try {
@@ -19,10 +17,8 @@ export default function AddMemberForm() {
                 name: name
             })
             setIsFormSubmitted(true)
-            // setValidation('Member successfully added')
             console.log('Member successfully added')
             setName('')
-            // setTimeout(() => setValidation(''), 3000)
             setTimeout(() => setIsFormSubmitted(false), 1000)
         } catch (err) {
             console.log(err)

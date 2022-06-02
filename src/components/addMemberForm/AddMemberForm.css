@@ -53,10 +53,6 @@
 
 .name-input-wrapper {
     width: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
 
 .name-input {
@@ -65,16 +61,11 @@
     padding-left: 10px;
     border-radius: 5px;
     border: 2px solid #fff;
-    /* margin: 2.5px; */
     font-size: 15px;
-    /* width: 100%; */
-/* 
-    text-align: center; */
 }
 
 .name-input:focus {
     outline: none !important;
-    /* box-sizing: border-box; */
     border: 2px solid #527293;
     box-shadow: 0 0 10px #527293;
 }

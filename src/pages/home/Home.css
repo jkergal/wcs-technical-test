@@ -3,10 +3,22 @@
     background-color: #FFF;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .home-container > * {
-    margin: 30px;
+    margin-bottom: 30px;
+}
+
+.add-member-form-wrapper {
+    margin-top: 60px;
+}
+
+.members-list-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

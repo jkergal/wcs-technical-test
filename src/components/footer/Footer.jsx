@@ -4,7 +4,9 @@ import './Footer.css'
 export default function Footer() {
     return (
         <>
-            <div className="footer-container">Footer</div>
+            <div className="footer-container">
+                <p>Réalisé par Jason en Anthestérion de l&apos;an 515 avant JC</p>
+            </div>
         </>
     )
 }

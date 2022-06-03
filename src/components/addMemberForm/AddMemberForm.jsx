@@ -71,7 +71,7 @@ export default function AddMemberForm() {
                                     fetchBoatCrewMembers()
                                 })
                             }}>
-                            <img src={checkIcon}></img>
+                            <img src={checkIcon} alt="tick icon"></img>
                         </button>
                     )}
 

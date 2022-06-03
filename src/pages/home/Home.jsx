@@ -7,8 +7,12 @@ export default function Home() {
     return (
         <>
             <div className="home-container">
-                <AddMemberForm />
-                <MembersList />
+                <div className="add-member-form-wrapper">
+                    <AddMemberForm />
+                </div>
+                <div className="members-list-wrapper">
+                    <MembersList />
+                </div>
             </div>
         </>
     )

@@ -2,7 +2,6 @@
     height: 187px;
     width: 835px;
     background-color: #f76c6c;
-    color: #ffffff;
     padding: 30px;
     border-radius: 5px;
 
@@ -44,6 +43,10 @@
 
 .button-grey {
     background-color: #527293;
+}
+
+.button-grey:hover {
+    background-color: #667a8e;
 }
 
 .button-green {

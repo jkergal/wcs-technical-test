@@ -1,5 +1,17 @@
 .header-container{
     height: 100%;
-    /* border: solid black 2px; */
-    background-color: #F76C6C;
+    background-color: #f4f4f4;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container img {
+    max-width: 85px;
+    margin-right: 10px;
+}
+
+.header-container h1 {
+    font-size: 2.5em;
 }

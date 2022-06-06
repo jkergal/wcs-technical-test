@@ -5,4 +5,8 @@
   grid-template-rows: 130px 1fr 60px;
 }
 
+.header {
+  border-bottom: solid 1px #F76C6C;
+}
+
 

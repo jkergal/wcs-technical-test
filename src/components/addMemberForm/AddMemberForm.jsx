@@ -17,7 +17,6 @@ export default function AddMemberForm() {
                 name: name
             })
             setIsFormSubmitted(true)
-            console.log('Member successfully added')
             setName('')
             setTimeout(() => setIsFormSubmitted(false), 1500)
         } catch (err) {
@@ -32,7 +31,6 @@ export default function AddMemberForm() {
             <div className="new-member-form-container">
                 <h1>Ajouter un(e) Argonaute</h1>
                 <form className="new-member-form">
-                    {/* <label htmlFor="name">Nom de l&apos;Argonaute</label> */}
                     <div className="name-input-wrapper">
                         <input
                             className="name-input"

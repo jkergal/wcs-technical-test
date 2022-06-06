@@ -29,7 +29,10 @@ export default function MembersList() {
                             case 1:
                                 return (
                                     <>
-                                        <h1>Membres de l&apos;équipage</h1>
+                                        <div className="members-list-title">
+                                            <h2>Membres de l&apos;équipage</h2>
+                                        </div>
+                                        <div className="divider-horizontal"></div>
                                         <div className="column-member">
                                             {splittedMembers.column1.map((member, i) => {
                                                 i++
@@ -62,7 +65,10 @@ export default function MembersList() {
                             case 2:
                                 return (
                                     <>
-                                        <h1>Membres de l&apos;équipage</h1>
+                                        <div className="members-list-title">
+                                            <h2>Membres de l&apos;équipage</h2>
+                                        </div>
+                                        <div className="divider-horizontal"></div>
                                         <div className="members-list-grid-2-columns">
                                             <div className="column-member">
                                                 {splittedMembers.column1.map((member) => {
@@ -109,7 +115,10 @@ export default function MembersList() {
                             default:
                                 return (
                                     <>
-                                        <h1>Membres de l&apos;équipage</h1>
+                                        <div className="members-list-title">
+                                            <h2>Membres de l&apos;équipage</h2>
+                                        </div>
+                                        <div className="divider-horizontal"></div>
                                         <div className="members-list-grid-3-columns">
                                             <div className="column-member">
                                                 {splittedMembers.column1.map((member) => {
@@ -123,6 +132,8 @@ export default function MembersList() {
                                                 })}
                                             </div>
 
+                                            <div className="divider"></div>
+
                                             <div className="column-member">
                                                 {splittedMembers.column2.map((member) => {
                                                     return (
@@ -134,6 +145,8 @@ export default function MembersList() {
                                                     )
                                                 })}
                                             </div>
+
+                                            <div className="divider"></div>
 
                                             <div className="column-member">
                                                 {splittedMembers.column3.map((member, i) => {

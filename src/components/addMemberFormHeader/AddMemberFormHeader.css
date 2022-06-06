@@ -1,0 +1,63 @@
+.new-member-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-default {
+    width: 100px;
+    height: 35px;
+    border: none;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    /* border: solid 1px white; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-grey {
+    background-color: #f1a3a3;
+}
+
+@keyframes colorAnimAdd {
+    from {
+        background-color: #f1a3a3;
+    }
+    to {
+        background-color: #88b4f9;
+    }
+}
+
+.button-grey:hover {
+    animation-name: colorAnimAdd;
+    /* animation: ease-in-out 3s forwards; */
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;  
+}
+
+.button-green {
+    background-color: #90cb71;
+    padding: 3px;
+}
+
+.name-input {
+    width: 140px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.name-input:focus {
+    outline: none !important;
+    border: 2px solid #88b4f9;
+    box-shadow: 0 0 10px #88b4f9;
+}

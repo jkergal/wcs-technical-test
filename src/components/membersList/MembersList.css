@@ -1,18 +1,45 @@
 .members-list-container {
-    width: 835px;
+    /* width: 835px; */
     background-color: #F76C6C;
     padding: 30px;
     border-radius: 5px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 40px;
+}
+
+/* .crew-title-pink {
+    color: #F76C6C;
+    margin-bottom: -60px;
+    margin-left: -4px;
+    margin-top: 0;
+    text-align: justify;
+    z-index: 5;
+    font-size: 50px;
+}
+.crew-title-white {
+    color: #fff;
+    margin-bottom: -11px;
+    margin-top: 0;
+    text-align: justify;
+    z-index: 4;
+    font-size: 50px;
+} */
+
+.members-list-title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+    /* color: #FFF; */
 }
 
 @keyframes colorAnimation {
     from {
-        background-color: #54ab26;
+        background-color: #90cb71;
         border-radius: 5px;}
     to {color: white;
         border-radius: 0px;}
@@ -25,9 +52,11 @@
 
 .members-list-grid-3-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
     grid-template-rows: 1fr;
     width: 100%;
+
+    margin: 15px;
 }
 
 .members-list-grid-2-columns {
@@ -35,6 +64,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: 100%;
+
+    margin: 15px;
 }
 
 .column-member {
@@ -42,4 +73,31 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    margin: 15px;
+}
+
+.border-column-left {
+    border-left: solid 1px white;
+}
+
+.border-column-right {
+    border-right: solid 1px white;
+}
+
+/* .divider {
+    width: 1px;
+    background: rgb(247,108,108);
+    background: linear-gradient(180deg, rgba(247,108,108,1) 0%, rgba(255,255,255,1) 50%, rgba(247,108,108,1) 100%);
+    background-color: white;
+} */
+
+.divider-horizontal {
+    height: 2px;
+    width: 125%;
+    /* background: rgb(247,108,108);
+    background: linear-gradient(180deg, rgba(247,108,108,1) 0%, rgba(255,255,255,1) 50%, rgba(247,108,108,1) 100%); */
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

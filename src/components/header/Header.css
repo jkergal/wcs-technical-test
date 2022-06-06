@@ -1,7 +1,21 @@
 .header-container{
     height: 100%;
-    background-color: #f4f4f4;
-    color: #000000;
+    background-color: #F76C6C;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 2px #F76C6C; */
+}
+
+.header-wrapper {
+    width: 835px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,4 +28,14 @@
 
 .header-container h1 {
     font-size: 2.5em;
+}
+
+.divider-header {
+    width: 2px;
+    height: 50px;
+    /* background: rgb(247,108,108);
+    background: linear-gradient(180deg, rgba(247,108,108,1) 0%, rgba(255,255,255,1) 50%, rgba(247,108,108,1) 100%); */
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 27px;
 }

@@ -20,8 +20,6 @@ export function FirestoreDataProvider(props) {
             setUpdateNumber(updateNumber + 1)
 
             setLoadingData(false)
-            console.log('Data loaded')
-            console.log('FETCH BOT CREW : context worked')
         } catch (err) {
             console.error(err)
         }
@@ -32,15 +30,10 @@ export function FirestoreDataProvider(props) {
     }, [])
 
     useEffect(() => {
-        console.log(members)
-        console.log(updateNumber)
         setSplittedMembers(splitArray(members))
     }, [members])
 
-    useEffect(() => {
-        console.log(splittedMembers)
-        console.log(members)
-    }, [splittedMembers])
+    useEffect(() => {}, [splittedMembers])
 
     return (
         <FirestoreDataContext.Provider

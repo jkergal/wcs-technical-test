@@ -1,6 +1,4 @@
 export default function splitArray(array) {
-    console.log(array.length)
-
     let splittedMembers = {}
 
     const membersSubdivisionLength = Math.ceil(array.length / 3)

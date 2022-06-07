@@ -19,7 +19,6 @@ export default function AddMemberForm() {
             setName('')
             setTimeout(() => setIsFormSubmitted(false), 1500)
         } catch (err) {
-            console.log(err)
             window.alert(
                 'Wopsy, there was an error adding the member to the database. Pease try again.'
             )
@@ -40,7 +39,7 @@ export default function AddMemberForm() {
                         autoComplete="off"
                         onChange={(event) => {
                             event.preventDefault()
-                            console.log(event.target.value)
+
                             setName(event.target.value)
                         }}
                     />

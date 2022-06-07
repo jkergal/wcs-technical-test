@@ -2,15 +2,6 @@
     height: 100%;
     background-color: #FFF;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-/* .members-list-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */

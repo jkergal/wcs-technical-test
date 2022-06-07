@@ -40,7 +40,6 @@ export default function MembersList() {
                                                     i === splittedMembers.column1.length &&
                                                     updateNumber > 1
                                                 ) {
-                                                    console.log('PROUUUUUUUT')
                                                     return (
                                                         <div
                                                             key={member.id}
@@ -89,7 +88,6 @@ export default function MembersList() {
                                                         i === splittedMembers.column2.length &&
                                                         updateNumber > 1
                                                     ) {
-                                                        console.log('PROUUUUUUUT')
                                                         return (
                                                             <div
                                                                 key={member.id}
@@ -132,8 +130,6 @@ export default function MembersList() {
                                                 })}
                                             </div>
 
-                                            <div className="divider"></div>
-
                                             <div className="column-member">
                                                 {splittedMembers.column2.map((member) => {
                                                     return (
@@ -146,8 +142,6 @@ export default function MembersList() {
                                                 })}
                                             </div>
 
-                                            <div className="divider"></div>
-
                                             <div className="column-member">
                                                 {splittedMembers.column3.map((member, i) => {
                                                     i++
@@ -155,7 +149,6 @@ export default function MembersList() {
                                                         i === splittedMembers.column3.length &&
                                                         updateNumber > 1
                                                     ) {
-                                                        console.log('PROUUUUUUUT' + i)
                                                         return (
                                                             <div
                                                                 key={member.id}

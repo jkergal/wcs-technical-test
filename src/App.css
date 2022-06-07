@@ -1,12 +1,8 @@
-.main-grid {
+.main-layout-grid {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 130px 1fr 60px;
-}
-
-.header {
-  border-bottom: solid 1px #F76C6C;
 }
 
 

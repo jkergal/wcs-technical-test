@@ -1,74 +1,60 @@
-.new-member-form-container {
-    height: 187px;
-    width: 835px;
-    background-color: #f76c6c;
-    padding: 30px;
-    border-radius: 5px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .new-member-form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-.validation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 8px;
 }
 
 .button-default {
-    width: 217px;
-    height: 30px;
+    width: 100px;
+    height: 36px;
     border: none;
+    margin: 5px;
     padding: 6px;
     border-radius: 5px;
-    margin-top: 10px;
     font-size: 15px;
     color: #fff;
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button-grey {
-    background-color: #527293;
+.button-blue {
+    background-color: #88b4f9;
 }
 
-.button-grey:hover {
-    background-color: #667a8e;
+@keyframes colorAnimAdd {
+    from {
+        background-color: #88b4f9;
+    }
+    to {
+        background-color: #6ca3fa;
+    }
+}
+
+.button-blue:hover {
+    animation-name: colorAnimAdd;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;  
 }
 
 .button-green {
-    background-color: #54ab26;
+    background-color: #90cb71;
     padding: 3px;
 }
 
-.name-input-wrapper {
-    width: 100%;
-}
-
 .name-input {
-    width: 200px;
+    width: 140px;
     height: 30px;
     padding-left: 10px;
     border-radius: 5px;
     border: 2px solid #fff;
     font-size: 15px;
+    margin: 5px;
 }
 
 .name-input:focus {
     outline: none !important;
-    border: 2px solid #527293;
-    box-shadow: 0 0 10px #527293;
+    border: 2px solid #88b4f9;
+    box-shadow: 0 0 10px #88b4f9;
 }

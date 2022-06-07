@@ -7,7 +7,6 @@ import checkIcon from '../../assets/icons/check.svg'
 
 export default function AddMemberForm() {
     const [name, setName] = useState('')
-    const [validation, setValidation] = useState('')
     const [isFormSubmitted, setIsFormSubmitted] = useState(false)
     const { fetchBoatCrewMembers } = useContext(FirestoreDataContext)
 
@@ -21,61 +20,57 @@ export default function AddMemberForm() {
             setTimeout(() => setIsFormSubmitted(false), 1500)
         } catch (err) {
             console.log(err)
-            setValidation('Wopsy, there was an error adding the member to the database')
-            setTimeout(() => setValidation(''), 3000)
+            window.alert(
+                'Wopsy, there was an error adding the member to the database. Pease try again.'
+            )
         }
     }
 
     return (
         <>
-            <div className="new-member-form-container">
-                <h1>Ajouter un(e) Argonaute</h1>
-                <form className="new-member-form">
-                    <div className="name-input-wrapper">
-                        <input
-                            className="name-input"
-                            id="name"
-                            name="name"
-                            type="text"
-                            value={name}
-                            placeholder="Nom de l'Argonaute"
-                            autoComplete="off"
-                            onChange={(event) => {
-                                event.preventDefault()
-                                console.log(event.target.value)
-                                setName(event.target.value)
-                            }}
-                        />
-                    </div>
-                    {isFormSubmitted === false ? (
-                        <button
-                            className="button-default button-grey"
-                            type="submit"
-                            onClick={(event) => {
-                                event.preventDefault()
-                                sendNameToDb().then(() => {
-                                    fetchBoatCrewMembers()
-                                })
-                            }}>
-                            <b>Ajouter</b>
-                        </button>
-                    ) : (
-                        <button
-                            className="button-default button-green"
-                            type="submit"
-                            onClick={(event) => {
-                                event.preventDefault()
-                                sendNameToDb().then(() => {
-                                    fetchBoatCrewMembers()
-                                })
-                            }}>
-                            <img src={checkIcon} alt="tick icon"></img>
-                        </button>
-                    )}
-
-                    <div className="validation">{validation}</div>
-                </form>
-            </div>
+            <form className="new-member-form">
+                <div className="name-input-wrapper">
+                    <input
+                        className="name-input"
+                        id="name"
+                        name="name"
+                        type="text"
+                        value={name}
+                        placeholder="Nom de l'Argonaute"
+                        autoComplete="off"
+                        onChange={(event) => {
+                            event.preventDefault()
+                            console.log(event.target.value)
+                            setName(event.target.value)
+                        }}
+                    />
+                </div>
+                {isFormSubmitted === false ? (
+                    <button
+                        className="button-default button-blue"
+                        type="submit"
+                        onClick={(event) => {
+                            event.preventDefault()
+                            sendNameToDb().then(() => {
+                                fetchBoatCrewMembers()
+                            })
+                        }}>
+                        <b>Ajouter</b>
+                    </button>
+                ) : (
+                    <button
+                        className="button-default button-green"
+                        type="submit"
+                        onClick={(event) => {
+                            event.preventDefault()
+                            sendNameToDb().then(() => {
+                                fetchBoatCrewMembers()
+                            })
+                        }}>
+                        <img src={checkIcon} alt="tick icon"></img>
+                    </button>
+                )}
+            </form>
         </>
     )
 }

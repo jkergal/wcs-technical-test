@@ -5,7 +5,7 @@ import Home from './pages/home/Home'
 
 function App() {
     return (
-        <div className="main-grid">
+        <div className="main-layout-grid">
             <header className="header">
                 <Header />
             </header>

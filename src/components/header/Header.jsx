@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 import logoWcs from '../../assets/images/logo-wcs-white.png'
-import AddMemberForm from '../addMemberFormHeader/AddMemberFormHeader.jsx'
+import AddMemberForm from '../addMemberForm/AddMemberForm'
 
 export default function Header() {
     return (
@@ -13,6 +13,7 @@ export default function Header() {
                         <div className="divider-header"></div>
                         <h1>Les Argonautes</h1>
                     </div>
+
                     <AddMemberForm />
                 </div>
             </div>
